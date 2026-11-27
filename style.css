@@ -1,0 +1,246 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #dbeafe, #ede9fe);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+    color: #1e293b;
+}
+
+/* Main Container */
+.container {
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1e3a8a;
+}
+
+header p {
+    color: #64748b;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Todo Card */
+.todo-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(30, 58, 138, 0.12);
+}
+
+/* Form */
+#form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+#text {
+    flex: 1;
+    min-width: 0;
+    padding: 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    outline: none;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+#text:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+#add-btn {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+#add-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+/* Task Information */
+.task-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.task-info h2 {
+    font-size: 20px;
+}
+
+#count {
+    font-size: 13px;
+    color: #2563eb;
+    font-weight: 600;
+}
+
+/* Filters */
+.filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    padding: 8px 18px;
+    border: 1px solid #dbeafe;
+    background: white;
+    border-radius: 20px;
+    cursor: pointer;
+    color: #64748b;
+    font-family: inherit;
+    transition: 0.3s;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: #2563eb;
+    color: white;
+    border-color: #2563eb;
+}
+
+/* Task List */
+#list {
+    list-style: none;
+}
+
+#list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px;
+    margin-bottom: 12px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+#list li:hover {
+    background: #eff6ff;
+}
+
+#list li span {
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    font-size: 14px;
+}
+
+#list li.done span {
+    text-decoration: line-through;
+    color: #94a3b8;
+}
+
+/* Task Buttons */
+#list button {
+    border: none;
+    padding: 7px 12px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+#list button[data-action="toggle"] {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+#list button[data-action="delete"] {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+#list button:hover {
+    opacity: 0.8;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+#clear-completed {
+    border: none;
+    background: transparent;
+    color: #dc2626;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+#clear-completed:hover {
+    text-decoration: underline;
+}
+
+/* Page Footer */
+.page-footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #64748b;
+    font-size: 12px;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    .todo-card {
+        padding: 20px 15px;
+    }
+
+    #form {
+        flex-direction: column;
+    }
+
+    #add-btn {
+        width: 100%;
+    }
+
+    #list li {
+        gap: 7px;
+        padding: 10px;
+    }
+}
